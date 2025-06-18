@@ -1,18 +1,16 @@
 package ex2;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class Sim {
-    public Calls[] calls;
-    private int number;
+    public Calls[] calls = new Calls[5];
+    private String number;
     private int credit;
+    private int numCalls = 0;
 
-    public Sim() {
-        Random random = new Random();
-        this.number = random.nextInt(10, 10000000);
+    public Sim(String phoneNumber) {
+        this.number = phoneNumber;
         this.credit = 0;
-        this.calls = new Calls[5];
     }
 
     public void printInfo() {
@@ -25,7 +23,16 @@ public class Sim {
 
     public void makeCall(String phoneNumber, int duration) {
         Calls call = new Calls(phoneNumber, duration);
-
+        if (numCalls == 5) {
+            this.calls[0] = calls[1];
+            this.calls[1] = calls[2];
+            this.calls[2] = calls[3];
+            this.calls[3] = calls[4];
+            this.calls[4] = call;
+        } else {
+            this.calls[numCalls] = call;
+            this.numCalls++;
+        }
     }
 
     public void printLastCalls() {
