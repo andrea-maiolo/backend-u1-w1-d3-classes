@@ -1,15 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import ex1.Rectangle;
+import ex2.Sim;
+import ex3.Article;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Rectangle myRectangle = new Rectangle(5.7, 6.1);
+        //myRectangle.printRectangle();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Rectangle secondR = new Rectangle(2.7, 7.8);
+
+//        Rectangle.printTwoRectangles(myRectangle, secondR);
+        Sim mySim = new Sim("3664537890");
+
+//        mySim.setCredit(5);
+//        mySim.printInfo();
+//        mySim.makeCall("4848", 56);
+//        mySim.makeCall("4848", 56);
+//        mySim.makeCall("4848", 56);
+//        mySim.makeCall("4848", 56);
+//        mySim.makeCall("4848", 56);
+//        mySim.printLastCalls();
+
+        Article myArticle = new Article(34, "shoes");
+
+        myArticle.printInfoArticle();
     }
+
+
 }
