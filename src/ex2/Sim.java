@@ -1,14 +1,16 @@
 package ex2;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Sim {
     public Calls[] calls;
-    private String number;
+    private int number;
     private int credit;
 
-    public Sim(String cellNumber) {
-        this.number = cellNumber;
+    public Sim() {
+        Random random = new Random();
+        this.number = random.nextInt(10, 10000000);
         this.credit = 0;
         this.calls = new Calls[5];
     }

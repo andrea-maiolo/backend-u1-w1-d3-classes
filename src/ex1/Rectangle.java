@@ -1,8 +1,8 @@
 package ex1;
 
 public class Rectangle {
-    private double height;
-    private double width;
+    private final double height;
+    private final double width;
 
     public Rectangle(double height, double width) {
         this.height = height;
@@ -13,6 +13,8 @@ public class Rectangle {
         this.height = 1.5;
         this.width = 3.5;
     }
+
+    //method of class not obj
 
     public static void printTwoRectangles(Rectangle r1, Rectangle r2) {
         double p1 = r1.getPerimeter(r1.height, r1.width);
@@ -29,11 +31,13 @@ public class Rectangle {
         System.out.println("Areas summed " + as);
     }
 
-    public double getPerimeter(double height, double width) {
+    //methods of the obj
+
+    private double getPerimeter(double height, double width) {
         return 2 * (height + width);
     }
 
-    public double getArea(double height, double width) {
+    private double getArea(double height, double width) {
         return height * width;
     }
 
