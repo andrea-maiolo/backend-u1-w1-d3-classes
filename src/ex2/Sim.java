@@ -3,7 +3,7 @@ package ex2;
 import java.util.Arrays;
 
 public class Sim {
-    public Calls[] calls = new Calls[5];
+    private Calls[] calls = new Calls[5];
     private String number;
     private int credit;
     private int numCalls = 0;
@@ -23,12 +23,14 @@ public class Sim {
 
     public void makeCall(String phoneNumber, int duration) {
         Calls call = new Calls(phoneNumber, duration);
-        if (numCalls == 5) {
-            this.calls[0] = calls[1];
-            this.calls[1] = calls[2];
-            this.calls[2] = calls[3];
-            this.calls[3] = calls[4];
-            this.calls[4] = call;
+        if (numCalls >= 5) {
+            for (int i = 0; i < this.calls.length; i++) {
+                if (i == 4) {
+                    this.calls[i] = call;
+                } else {
+                    this.calls[i] = calls[i + 1];
+                }
+            }
         } else {
             this.calls[numCalls] = call;
             this.numCalls++;

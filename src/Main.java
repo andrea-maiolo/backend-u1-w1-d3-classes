@@ -1,13 +1,14 @@
+import ex1.Rectangle;
 import ex2.Sim;
 
 public class Main {
     public static void main(String[] args) {
-//        Rectangle myRectangle = new Rectangle(5.7, 6.1);
-//        //myRectangle.printRectangle();
-//        Rectangle secondR = new Rectangle(2.7, 7.8);
-//        Rectangle basicR = new Rectangle();
-//        Rectangle.printTwoRectangles(myRectangle, secondR);
-//        basicR.printRectangle();
+        Rectangle myRectangle = new Rectangle(5.7, 6.1);
+        //myRectangle.printRectangle();
+        Rectangle secondR = new Rectangle(2.7, 7.8);
+        Rectangle basicR = new Rectangle();
+        Rectangle.printTwoRectangles(myRectangle, secondR);
+        basicR.printRectangle();
 
 
         Sim mySim = new Sim("3664537890");
@@ -20,6 +21,7 @@ public class Main {
         mySim.makeCall("8904578903450789", 554);
         mySim.makeCall("344388", 583);
         mySim.makeCall("43545", 555);
+        mySim.makeCall("nuova chiamate", 1);
         mySim.printLastCalls();
 
         // Article myArticle = new Article(34, "shoes");
