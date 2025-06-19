@@ -24,9 +24,7 @@ public class Main {
         mySim.makeCall("nuova chiamate", 1);
         mySim.printLastCalls();
 
-        // Article myArticle = new Article(34, "shoes");
 
-        //myArticle.printInfoArticle();
     }
 
 
